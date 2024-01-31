@@ -1,0 +1,22 @@
+body {
+    background-image: linear-gradient(to bottom, var(--green), var(--bg-color));
+}
+
+main {
+    width: 600px;
+    height: 380px;
+}
+
+#image {
+    width: 40%;
+    height: 100%;
+    float: left;
+}
+
+#form {
+    width: 310px;
+    height: 100%;
+    float: right;
+    margin-top: 23px;
+    margin-right: 25px;
+}

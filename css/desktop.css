@@ -1,0 +1,48 @@
+body {
+    background-image: linear-gradient(to bottom, var(--green), var(--bg-color));
+}
+
+main {
+    width: 750px;
+    height: 580px;
+}
+
+#image {
+    width: 45%;
+    height: 100%;
+    float: right;
+}
+
+#form {
+    width: 330px;
+    float: left;
+    margin-top: 58px;
+    margin-left: 40px;
+}
+
+h1 {
+    font-size: 2.4em;
+}
+
+p {
+    font-size: 1.8em;
+}
+
+.field {
+    height: 70px;
+}
+
+span {
+    transform: translate(2px, 8px);
+}
+
+div>input {
+    height: 65px;
+
+    transform: translateY(1px);
+}
+
+.inputbtn {
+    height: 60px;
+    font-size: 1.3em;
+}

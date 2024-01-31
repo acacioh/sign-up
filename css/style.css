@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+:root {
+    --green: #1DD3B0;
+    --light-blue: #4BB3FD;
+    --blue: #0496FF;
+    --dark-cyan: #0F7173;
+    --orange: #F26430;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--bg-color);
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #0F7173;
+}
+
+body {
+    position: relative;
+}
+
+main {
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 530px;
+    position: absolute;
+    text-align: center;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+
+    transform: translate(-50%, -50%);
+    transition: width .3s, heigth .3s;
+    transition-timing-function: ease;
+    /* Transform e transitions têm que ser os últimos elementos */
+}
+
+#image {
+    display: block;
+    background: var(--bg-color) url('../images/login.png') no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 300px;
+    height: 200px;
+}
+
+#form {
+    display: block;
+    width: 240px;
+    height: 200px;
+    margin: auto;
+}
+
+main>section>h1 {
+    margin: 10px;
+}
+
+.field {
+    display: block;
+    width: 100%;
+    height: 47px;
+    margin-top: 10px;
+    background-color: var(--bg-color);
+    border-radius: 10px;
+    border: 2px solid var(--bg-color);
+    overflow: hidden;
+}
+
+span {
+    color: white;
+    width: 40px;
+    padding: 5px;
+
+    transform: translate(3px, 5px);
+}
+
+div>input {
+    height: 40px;
+    border: none;
+    width: calc(100% - 45px);
+    padding: 4px;
+    background-color: var(--green);
+
+    transform: translateY(-2px);
+}
+
+input:focus-within {
+    background-color: white;
+}
+
+label {
+    display: none;
+}
+
+.inputbtn {
+    width: 100%;
+    height: 47px;
+    display: block;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.inputbtn:hover {
+    background-color: var(--btn-hover-color);
+}
+
+form>input[type=submit] {
+    color: white;
+    background-color: var(--bg-color);
+    border: none;
+}
+
+form>input[type=button] {
+    border: 1px solid var(--bg-color);
+}
+
+form>input[type=button]:hover {
+    color: white;
+}
