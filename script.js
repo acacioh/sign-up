@@ -1,4 +1,4 @@
-let password = document.getElementById("psw");
+let password = document.getElementById("ipass");
 let lower = document.getElementById("lower");
 let upper = document.getElementById("upper");
 let num = document.getElementById("num");

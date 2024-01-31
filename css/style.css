@@ -117,3 +117,41 @@ form>input[type=submit] {
 .inputbtn:hover {
     background-color: var(--pink);
 }
+
+.container {
+    background-color: var(--white);
+    padding: 10px;
+}
+
+#message {
+    display: none;
+    color: var(--dark-blue);
+    position: relative;
+    padding: 20px;
+    height: 180px;
+}
+
+#message p {
+    padding: 0px 20px;
+    font-size: 0.8em;
+}
+
+.valid {
+    color: var(--cyan);
+}
+
+.valid:before {
+    position: relative;
+    left: -10px;
+    content: "✔";
+}
+
+.invalid {
+    color: var(--pink);
+}
+
+.invalid:before {
+    position: relative;
+    left: -10px;
+    content: "✖";
+}

@@ -15,7 +15,19 @@
 
 <body>
     <main>
-        <section id="image"></section>
+        <section id="image">
+            <div id="message" class="container">
+                <p><strong>Sua senha deve conter, no mínimo:</strong></p>
+                <p id="length" class="invalid">8 caracteres</p>
+                <p id="lower" class="invalid">Uma letra minúscula</p>
+                <p id="upper" class="invalid">Uma letra maiúscula</p>
+                <p id="num" class="invalid">Um número</p>
+                <p id="special" class="invalid">
+                    Um caractere especial (!, @, #, $, %, & ou *)
+                </p>
+                <p id="space" class="valid">E não pode conter espaços</p>
+            </div>
+        </section>
         <section id="form">
             <h1>Seja bem vindo(a)!</h1>
             <p>Faça seu cadastro</p>
@@ -48,14 +60,16 @@
                     <span class="material-symbols-outlined">
                         key
                     </span>
-                    <input type="password" name="pass" id="ipass" required placeholder="Senha">
+                    <input type="password" name="pass" id="ipass" required placeholder="Senha"
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                     <label for="ipass">Senha</label>
                 </div>
                 <div class="field">
                     <span class="material-symbols-outlined">
                         key
                     </span>
-                    <input type="password" name="cpass" id="icpass" required placeholder="Confirme a senha">
+                    <input type="password" name="cpass" id="icpass" required placeholder="Confirme a senha"
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                     <label for="icpass">Senha</label>
                 </div>
                 <input type="submit" value="Cadastrar" class="inputbtn">
@@ -63,5 +77,6 @@
         </section>
     </main>
 </body>
+<script src="script.js"></script>
 
 </html>
