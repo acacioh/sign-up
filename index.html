@@ -16,7 +16,7 @@
 <body>
     <main>
         <section id="image">
-            <div id="message" class="container">
+            <div id="password-message" class="container">
                 <p><strong>Sua senha deve conter, no mínimo:</strong></p>
                 <p id="length" class="invalid">8 caracteres</p>
                 <p id="lower" class="invalid">Uma letra minúscula</p>
@@ -26,6 +26,9 @@
                     Um caractere especial (!, @, #, $, %, & ou *)
                 </p>
                 <p id="space" class="valid">E não pode conter espaços</p>
+            </div>
+            <div id="password-confirm-message" class="container">
+                <p><strong>As senhas informadas devem ser iguais</strong></p>
             </div>
         </section>
         <section id="form">
@@ -72,7 +75,7 @@
                         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                     <label for="icpass">Senha</label>
                 </div>
-                <input type="submit" value="Cadastrar" class="inputbtn">
+                <input type="submit" value="Cadastrar" class="inputbtn" onclick="validatePasswordOnSubmit()">
             </form>
         </section>
     </main>

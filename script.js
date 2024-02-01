@@ -1,4 +1,7 @@
 let password = document.getElementById("ipass");
+let passwordMessage = document.getElementById("password-message");
+let confirmPassword = document.getElementById("icpass");
+let confirmPasswordMessage = document.getElementById("password-confirm-message");
 let lower = document.getElementById("lower");
 let upper = document.getElementById("upper");
 let num = document.getElementById("num");
@@ -7,19 +10,20 @@ let space = document.getElementById("space");
 let spec = document.getElementById("special");
 let chars = ["!", "@", "#", "$", "%", "&", "*"];
 
-// When the user clicks on the password field, show the message box
 password.onfocus = function () {
-  document.getElementById("message").style.display = "block";
+  passwordMessage.style.display = "block";
+  confirmPasswordMessage.style.display = "none";
 };
 
-// When the user clicks outside of the password field, hide the message box
 password.onblur = function () {
-  document.getElementById("message").style.display = "none";
+  passwordMessage.style.display = "none";
 };
 
-// When the user starts to type something inside the password field
+confirmPassword.onblur = function () {
+  confirmPasswordMessage.style.display = "none";
+};
+
 password.onkeyup = function () {
-  // Validate lowercase
   var lowerCaseLetters = /[a-z]/g;
   if (password.value.match(lowerCaseLetters)) {
     lower.classList.remove("invalid");
@@ -29,7 +33,6 @@ password.onkeyup = function () {
     lower.classList.add("invalid");
   }
 
-  // Validate uppercase
   var upperCaseLetters = /[A-Z]/g;
   if (password.value.match(upperCaseLetters)) {
     upper.classList.remove("invalid");
@@ -39,7 +42,6 @@ password.onkeyup = function () {
     upper.classList.add("invalid");
   }
 
-  // Validate numbers
   var numbers = /[0-9]/g;
   if (password.value.match(numbers)) {
     num.classList.remove("invalid");
@@ -49,7 +51,6 @@ password.onkeyup = function () {
     num.classList.add("invalid");
   }
 
-  // Validate length
   if (password.value.length >= 8) {
     length.classList.remove("invalid");
     length.classList.add("valid");
@@ -58,7 +59,6 @@ password.onkeyup = function () {
     length.classList.add("invalid");
   }
 
-  // Validate space
   if (password.value.search(" ") != -1) {
     space.classList.remove("valid");
     space.classList.add("invalid");
@@ -67,7 +67,6 @@ password.onkeyup = function () {
     space.classList.add("valid");
   }
 
-  // Validate special characters
   let charflag = false;
   function isspecial(c) {
     if (password.value.includes(c)) charflag = true;
@@ -81,3 +80,26 @@ password.onkeyup = function () {
     spec.classList.add("invalid");
   }
 };
+
+document.addEventListener('DOMContentLoaded', function () {
+
+  function validatePassword() {
+    var passwordInput = password.value;
+    var confirmPasswordInput = confirmPassword.value;
+
+    if (passwordInput === confirmPasswordInput) {
+      confirmPasswordMessage.style.display = "none";
+    } else {
+      confirmPasswordMessage.style.display = "block";
+    }
+  }
+
+  confirmPassword.addEventListener('focus', validatePassword);
+  confirmPassword.addEventListener('input', validatePassword);
+});
+
+function validatePasswordOnSubmit() {
+  if (!(password.value === confirmPassword.value)) {
+    confirmPasswordMessage.style.display = "block";
+  }
+}

@@ -121,19 +121,25 @@ form>input[type=submit] {
 .container {
     background-color: var(--white);
     padding: 10px;
-}
-
-#message {
     display: none;
-    color: var(--dark-blue);
-    position: relative;
-    padding: 20px;
     height: 180px;
 }
 
-#message p {
+#password-message {
+    color: var(--dark-blue);
+    position: relative;
+    padding: 20px;
+}
+
+#password-message>p {
     padding: 0px 20px;
     font-size: 0.8em;
+}
+
+#password-confirm-message>p {
+    margin-top: 50px;
+    padding: 0px 20px;
+    color: var(--cyan);
 }
 
 .valid {
