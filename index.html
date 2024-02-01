@@ -1,37 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <h3>Validação de senha</h3>
-    <div class="container">
-      <form>
-        <label for="psw">Insira sua senha</label>
-        <input
-          type="password"
-          id="psw"
-          name="psw"
-          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-          required
-        />
-      </form>
-    </div>
-    <div id="message" class="container">
-      <strong>Sua senha deve conter, no mínimo:</strong>
-      <p id="length" class="invalid">8 caracteres</p>
-      <p id="lower" class="invalid">Uma letra minúscula</p>
-      <p id="upper" class="invalid">Uma letra maiúscula</p>
-      <p id="num" class="invalid">Um número</p>
-      <p id="special" class="invalid">
-        Um caractere especial (!, @, #, $, %, & ou *)
-      </p>
-      <p id="space" class="valid">E não pode conter espaços</p>
-    </div>
-  </body>
-  <script src="script.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tablet.css" media="screen and (min-width: 768px) and (max-width: 992px)">
+    <link rel="stylesheet" href="css/desktop.css" media="screen and (min-width: 992px) and (max-width: 1200px)">
+    <link rel="stylesheet" href="css/tv.css" media="screen and (min-width: 1200px)">
+</head>
+
+<body>
+    <main>
+        <section id="image">
+            <div id="password-message" class="container">
+                <p><strong>Sua senha deve conter, no mínimo:</strong></p>
+                <p id="length" class="invalid">8 caracteres</p>
+                <p id="lower" class="invalid">Uma letra minúscula</p>
+                <p id="upper" class="invalid">Uma letra maiúscula</p>
+                <p id="num" class="invalid">Um número</p>
+                <p id="special" class="invalid">
+                    Um caractere especial (!, @, #, $, %, & ou *)
+                </p>
+                <p id="space" class="valid">E não pode conter espaços</p>
+            </div>
+            <div id="password-confirm-message" class="container">
+                <p><strong>As senhas informadas devem ser iguais</strong></p>
+            </div>
+        </section>
+        <section id="form">
+            <h1>Seja bem vindo(a)!</h1>
+            <p>Faça seu cadastro</p>
+            <form action="cadastro.php" method="post" autocomplete="on">
+                <div class="field">
+                    <span class="material-symbols-outlined">
+                        person
+                    </span>
+                    <input id="userinput" type="text" name="user" id="iuser" autocomplete="username" required
+                        placeholder="Nome de usuário">
+                    <label for="iuser">Usuário</label>
+                </div>
+                <div class="field">
+                    <span class="material-symbols-outlined">
+                        mail
+                    </span>
+                    <input id="emailinput" type="email" name="mail" id="imail" autocomplete="email" required
+                        placeholder="Email">
+                    <label for="imail">Email</label>
+                </div>
+                <div class="field">
+                    <span class="material-symbols-outlined">
+                        phone
+                    </span>
+                    <input id="phoneinput" type="tel" name="phone" id="iphone" autocomplete="tel" required
+                        placeholder="Celular">
+                    <label for="iphone">Telefone</label>
+                </div>
+                <div class="field">
+                    <span class="material-symbols-outlined">
+                        key
+                    </span>
+                    <input type="password" name="pass" id="ipass" required placeholder="Senha"
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                    <label for="ipass">Senha</label>
+                </div>
+                <div class="field">
+                    <span class="material-symbols-outlined">
+                        key
+                    </span>
+                    <input type="password" name="cpass" id="icpass" required placeholder="Confirme a senha"
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                    <label for="icpass">Senha</label>
+                </div>
+                <input type="submit" value="Cadastrar" class="inputbtn" onclick="validatePasswordOnSubmit()">
+            </form>
+        </section>
+    </main>
+</body>
+<script src="script.js"></script>
+
 </html>
