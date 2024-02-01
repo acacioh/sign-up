@@ -12,8 +12,6 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color: var(--dark-blue);
 }
 
 html,
@@ -25,10 +23,13 @@ body {
 
 body {
     position: relative;
+    overflow-x: hidden;
 }
 
 main {
-    top: 50%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    top: 45%;
     left: 50%;
     width: 300px;
     height: 600px;
@@ -58,6 +59,7 @@ main {
     display: block;
     width: 240px;
     margin: auto;
+    color: var(--dark-blue);
 }
 
 main>section>h1 {
@@ -91,7 +93,7 @@ div>input {
     padding: 4px;
     background-color: var(--white);
 
-    transform: translateY(-3px);
+    transform: translateY(-5px);
 }
 
 label {
@@ -139,7 +141,7 @@ form>input[type=submit] {
 #password-confirm-message>p {
     margin-top: 50px;
     padding: 0px 20px;
-    color: var(--cyan);
+    color: var(--dark-blue);
 }
 
 .valid {
@@ -160,4 +162,34 @@ form>input[type=submit] {
     position: relative;
     left: -10px;
     content: "✖";
+}
+
+footer {
+    background-color: black;
+    color: var(--white);
+    border-radius: 10px;
+    text-align: center;
+    width: 400px;
+    height: 80px;
+    font-family: 'Times New Roman', Times, serif;
+    top: 100%;
+    left: 50%;
+    position: absolute;
+
+    transform: translate(-50%, -80%);
+    transition: width .3s, heigth .3s;
+    transition-timing-function: ease;
+}
+
+footer>nav {
+    padding-top: 10px;
+}
+
+footer>p {
+    margin-top: 0px;
+    padding-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
 }
