@@ -97,3 +97,7 @@ function validatePassword() {
     confirmPasswordMessage.style.display = "block";
   }
 }
+
+function submitForm() {
+  alert('Simulação realizada com sucesso!');
+}
