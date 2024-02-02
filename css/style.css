@@ -156,7 +156,7 @@ footer {
     color: var(--white);
     border-radius: 10px;
     text-align: center;
-    width: 300px;
+    width: 100vw;
     height: 80px;
     font-family: 'Times New Roman', Times, serif;
     margin: auto;
