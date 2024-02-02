@@ -8,6 +8,9 @@ main {
 }
 
 #image {
+    background: var(--dark-blue) url('../images/login.png') no-repeat;
+    background-position: center center;
+    background-size: cover;
     width: 40%;
     height: 100%;
     float: left;

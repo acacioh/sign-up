@@ -14,23 +14,8 @@
 </head>
 
 <body>
-    <main>
-        <section id="image">
-            <div id="password-message" class="container">
-                <p><strong>Sua senha deve conter, no mínimo:</strong></p>
-                <p id="length" class="invalid">8 caracteres</p>
-                <p id="lower" class="invalid">Uma letra minúscula</p>
-                <p id="upper" class="invalid">Uma letra maiúscula</p>
-                <p id="num" class="invalid">Um número</p>
-                <p id="special" class="invalid">
-                    Um caractere especial (!, @, #, $, %, & ou *)
-                </p>
-                <p id="space" class="valid">E não pode conter espaços</p>
-            </div>
-            <div id="password-confirm-message" class="container">
-                <p><strong>As senhas informadas devem ser iguais</strong></p>
-            </div>
-        </section>
+    <main id="content">
+        <section id="image"></section>
         <section id="form">
             <h1>Seja bem vindo(a)!</h1>
             <p>Faça seu cadastro</p>
@@ -59,6 +44,17 @@
                         placeholder="Celular" pattern="^\(\d{2}\)[0-9]{4, 5}-[0-9]{4}$">
                     <label for="iphone">Telefone</label>
                 </div>
+                <div id="password-message" class="container">
+                    <p><strong>Sua senha deve conter, no mínimo:</strong></p>
+                    <p id="length" class="invalid">8 caracteres</p>
+                    <p id="lower" class="invalid">Uma letra minúscula</p>
+                    <p id="upper" class="invalid">Uma letra maiúscula</p>
+                    <p id="num" class="invalid">Um número</p>
+                    <p id="special" class="invalid">
+                        Um caractere especial (!, @, # ou $)
+                    </p>
+                    <p id="space" class="valid">E não pode conter espaços</p>
+                </div>
                 <div class="field">
                     <span class="material-symbols-outlined">
                         key
@@ -66,6 +62,9 @@
                     <input type="password" name="pass" id="ipass" required placeholder="Senha"
                         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                     <label for="ipass">Senha</label>
+                </div>
+                <div id="password-confirm-message" class="container">
+                    <p><strong>As senhas informadas devem ser iguais</strong></p>
                 </div>
                 <div class="field">
                     <span class="material-symbols-outlined">
@@ -75,7 +74,7 @@
                         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                     <label for="icpass">Senha</label>
                 </div>
-                <input type="submit" value="Cadastrar" class="inputbtn" onclick="validatePasswordOnSubmit()">
+                <input type="submit" value="Cadastrar" class="inputbtn" onclick="validatePassword()">
             </form>
         </section>
     </main>

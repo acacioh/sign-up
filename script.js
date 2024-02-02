@@ -1,3 +1,4 @@
+let main = document.getElementById("content");
 let password = document.getElementById("ipass");
 let passwordMessage = document.getElementById("password-message");
 let confirmPassword = document.getElementById("icpass");
@@ -8,14 +9,15 @@ let num = document.getElementById("num");
 let length = document.getElementById("length");
 let space = document.getElementById("space");
 let spec = document.getElementById("special");
-let chars = ["!", "@", "#", "$", "%", "&", "*"];
+let chars = ["!", "@", "#", "$"];
 
 password.onfocus = function () {
+  main.style.height = '530px';
   passwordMessage.style.display = "block";
-  confirmPasswordMessage.style.display = "none";
 };
 
 password.onblur = function () {
+  main.style.height = '400px';
   passwordMessage.style.display = "none";
 };
 
@@ -82,24 +84,16 @@ password.onkeyup = function () {
 };
 
 document.addEventListener('DOMContentLoaded', function () {
-
-  function validatePassword() {
-    var passwordInput = password.value;
-    var confirmPasswordInput = confirmPassword.value;
-
-    if (passwordInput === confirmPasswordInput) {
-      confirmPasswordMessage.style.display = "none";
-    } else {
-      confirmPasswordMessage.style.display = "block";
-    }
-  }
-
   confirmPassword.addEventListener('focus', validatePassword);
   confirmPassword.addEventListener('input', validatePassword);
 });
 
-function validatePasswordOnSubmit() {
-  if (!(password.value === confirmPassword.value)) {
+function validatePassword() {
+  if (password.value === confirmPassword.value) {
+    main.style.height = '400px';
+    confirmPasswordMessage.style.display = "none";
+  } else {
+    main.style.height = '430px';
     confirmPasswordMessage.style.display = "block";
   }
 }
