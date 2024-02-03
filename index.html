@@ -22,76 +22,19 @@
 </head>
 
 <body>
-    <main id="content">
-        <section id="image"></section>
-        <section id="form">
-            <h1>Seja bem vindo(a)!</h1>
-            <p>Faça seu cadastro</p>
-            <form action="#" method="post" autocomplete="on" onsubmit="submitForm()">
-                <div class="field">
-                    <span class="material-symbols-outlined">
-                        person
-                    </span>
-                    <input type="text" name="user" id="iuser" autocomplete="username" required
-                        placeholder="Nome de usuário">
-                    <label for="iuser">Usuário</label>
-                </div>
-                <div class="field">
-                    <span class="material-symbols-outlined">
-                        mail
-                    </span>
-                    <input type="email" name="mail" id="imail" autocomplete="email" required placeholder="Email">
-                    <label for="imail">Email</label>
-                </div>
-                <div class="field">
-                    <span class="material-symbols-outlined">
-                        phone
-                    </span>
-                    <input type="tel" name="phone" id="iphone" autocomplete="tel" required placeholder="Celular">
-                    <label for="iphone">Telefone</label>
-                </div>
-                <div id="password-message" class="container">
-                    <p><strong>Sua senha deve conter, no mínimo:</strong></p>
-                    <p id="length" class="invalid">8 caracteres</p>
-                    <p id="lower" class="invalid">Uma letra minúscula</p>
-                    <p id="upper" class="invalid">Uma letra maiúscula</p>
-                    <p id="num" class="invalid">Um número</p>
-                    <p id="special" class="invalid">
-                        Um caractere especial (!, @, # ou $)
-                    </p>
-                    <p id="space" class="valid">E não pode conter espaços</p>
-                </div>
-                <div class="field">
-                    <span class="material-symbols-outlined">
-                        key
-                    </span>
-                    <input type="password" name="pass" id="ipass" required placeholder="Senha"
-                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
-                    <label for="ipass">Senha</label>
-                </div>
-                <div id="password-confirm-message" class="container">
-                    <p><strong>As senhas informadas devem ser iguais</strong></p>
-                </div>
-                <div class="field">
-                    <span class="material-symbols-outlined">
-                        key
-                    </span>
-                    <input type="password" name="cpass" id="icpass" required placeholder="Confirme a senha"
-                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
-                    <label for="icpass">Senha</label>
-                </div>
-                <input type="submit" value="Cadastrar" class="inputbtn" onclick="validatePassword()">
-            </form>
-        </section>
+    <header>
+        <a href="html/index_ptBR.html" target="main-content">
+            <img src="images/ptBR.png" alt="ptBR" class="flag">
+        </a>
+        <a href="html/index_enUS.html" target="main-content">
+            <img src="images/enUS.png" alt="enUS" class="flag">
+        </a>
+    </header>
+    <main>
+        <iframe src="html/index_ptBR.html" frameborder="0" name="main-content" id="main-iframe">
+            <p>Infelizmente seu navegador não é compatível com isso!</p>
+        </iframe>
     </main>
-    <footer>
-        <nav>
-            <a href="https://www.linkedin.com/in/acacio-henrique-afonso-a18a14174/" target="_blank">
-                <img src="images/linkedin.png" alt="LinkedIn" height="30px" width="30px" />
-            </a>
-        </nav>
-        <p>Desenvolvido por Acacio</p>
-    </footer>
 </body>
 <script src="script.js"></script>
 
