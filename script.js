@@ -98,6 +98,8 @@ function validatePassword() {
   }
 }
 
-function submitForm() {
-  alert('Simulação realizada com sucesso!');
+function submitForm(event, alertMessage) {
+  event.preventDefault();
+  event.target.reset();
+  alert(alertMessage);
 }

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="../css/style.css">
 
     <!--
@@ -27,9 +27,9 @@
         <section id="form">
             <h1>Seja bem vindo(a)!</h1>
             <p>Faça seu cadastro</p>
-            <form action="#" method="post" autocomplete="on" onsubmit="submitForm()">
+            <form autocomplete="on" onsubmit="submitForm(event, 'Simulação realizada com sucesso!')">
                 <div class="field">
-                    <span class="material-symbols-outlined">
+                    <span class="material-symbols-rounded">
                         person
                     </span>
                     <input type="text" name="user" id="iuser" autocomplete="username" required
@@ -37,14 +37,14 @@
                     <label for="iuser">Usuário</label>
                 </div>
                 <div class="field">
-                    <span class="material-symbols-outlined">
+                    <span class="material-symbols-rounded">
                         mail
                     </span>
                     <input type="email" name="mail" id="imail" autocomplete="email" required placeholder="Email">
                     <label for="imail">Email</label>
                 </div>
                 <div class="field">
-                    <span class="material-symbols-outlined">
+                    <span class="material-symbols-rounded">
                         phone
                     </span>
                     <input type="tel" name="phone" id="iphone" autocomplete="tel" required placeholder="Celular">
@@ -62,7 +62,7 @@
                     <p id="space" class="valid">E não pode conter espaços</p>
                 </div>
                 <div class="field">
-                    <span class="material-symbols-outlined">
+                    <span class="material-symbols-rounded">
                         key
                     </span>
                     <input type="password" name="pass" id="ipass" required placeholder="Senha"
@@ -73,13 +73,14 @@
                     <p><strong>As senhas informadas devem ser iguais</strong></p>
                 </div>
                 <div class="field">
-                    <span class="material-symbols-outlined">
+                    <span class="material-symbols-rounded">
                         key
                     </span>
                     <input type="password" name="cpass" id="icpass" required placeholder="Confirme a senha"
                         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
                     <label for="icpass">Senha</label>
                 </div>
+                <input type="reset" value="Limpar" class="inputbtn">
                 <input type="submit" value="Cadastrar" class="inputbtn" onclick="validatePassword()">
             </form>
         </section>
