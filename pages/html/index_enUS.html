@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -25,16 +25,15 @@
     <main id="content">
         <section id="image"></section>
         <section id="form">
-            <h1>Seja bem vindo(a)!</h1>
-            <p>Faça seu cadastro</p>
-            <form autocomplete="on" onsubmit="submitForm(event, 'Simulação realizada com sucesso!')">
+            <h1>Welcome!</h1>
+            <p>Sign up</p>
+            <form autocomplete="on" onsubmit="submitForm(event, 'End of sign up simulation!')">
                 <div class="field">
                     <span class="material-symbols-rounded">
                         person
                     </span>
-                    <input type="text" name="user" id="iuser" autocomplete="username" required
-                        placeholder="Nome de usuário">
-                    <label for="iuser">Usuário</label>
+                    <input type="text" name="user" id="iuser" autocomplete="username" required placeholder="Username">
+                    <label for="iuser">Username</label>
                 </div>
                 <div class="field">
                     <span class="material-symbols-rounded">
@@ -47,51 +46,51 @@
                     <span class="material-symbols-rounded">
                         phone
                     </span>
-                    <input type="tel" name="phone" id="iphone" autocomplete="tel" required placeholder="Celular">
-                    <label for="iphone">Telefone</label>
+                    <input type="tel" name="phone" id="iphone" autocomplete="tel" required placeholder="Phone">
+                    <label for="iphone">Phone</label>
                 </div>
                 <div id="password-message" class="container">
-                    <p><strong>Sua senha deve conter, no mínimo:</strong></p>
-                    <p id="length" class="invalid">8 caracteres</p>
-                    <p id="lower" class="invalid">Uma letra minúscula</p>
-                    <p id="upper" class="invalid">Uma letra maiúscula</p>
-                    <p id="num" class="invalid">Um número</p>
+                    <p><strong>Your password must contain at least:</strong></p>
+                    <p id="length" class="invalid">8 chars</p>
+                    <p id="lower" class="invalid">A lowercase letter</p>
+                    <p id="upper" class="invalid">An uppercase letter</p>
+                    <p id="num" class="invalid">A number</p>
                     <p id="special" class="invalid">
-                        Um caractere especial (!, @, # ou $)
+                        A special char (!, @, # ou $)
                     </p>
-                    <p id="space" class="valid">E não pode conter espaços</p>
+                    <p id="space" class="valid">And it can't have spaces</p>
                 </div>
                 <div class="field">
                     <span class="material-symbols-rounded">
                         key
                     </span>
-                    <input type="password" name="pass" id="ipass" required placeholder="Senha"
+                    <input type="password" name="pass" id="ipass" required placeholder="Password"
                         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
-                    <label for="ipass">Senha</label>
+                    <label for="ipass">Password</label>
                 </div>
                 <div id="password-confirm-message" class="container">
-                    <p><strong>As senhas informadas devem ser iguais</strong></p>
+                    <p><strong>Input passwords must be equal</strong></p>
                 </div>
                 <div class="field">
                     <span class="material-symbols-rounded">
                         key
                     </span>
-                    <input type="password" name="cpass" id="icpass" required placeholder="Confirme a senha"
+                    <input type="password" name="cpass" id="icpass" required placeholder="Confirm your password"
                         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
-                    <label for="icpass">Senha</label>
+                    <label for="icpass">Password</label>
                 </div>
-                <input type="reset" value="Limpar" class="inputbtn">
-                <input type="submit" value="Cadastrar" class="inputbtn" onclick="validatePassword()">
+                <input type="reset" value="Clear" class="inputbtn">
+                <input type="submit" value="Submit" class="inputbtn" onclick="validatePassword()">
             </form>
         </section>
     </main>
     <footer>
         <nav>
             <a href="https://www.linkedin.com/in/acacio-henrique-afonso-a18a14174/" target="_blank">
-                <img src="../images/linkedin.png" alt="LinkedIn" height="30px" width="30px" />
+                <img src="../../images/linkedin.png" alt="LinkedIn" height="30px" width="30px" />
             </a>
         </nav>
-        <p>Desenvolvido por Acacio</p>
+        <p>Developed by Acacio</p>
     </footer>
 </body>
 <script src="../script.js"></script>
