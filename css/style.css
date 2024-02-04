@@ -12,6 +12,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 html,
@@ -19,10 +20,6 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: var(--dark-blue);
-}
-
-body {
-    overflow-x: hidden;
 }
 
 header {
@@ -111,7 +108,7 @@ div>input {
     padding: 4px;
     background-color: var(--white);
 
-    transform: translateY(-5px);
+    transform: translateY(-10px);
 }
 
 label {
