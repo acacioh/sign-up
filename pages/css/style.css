@@ -131,8 +131,9 @@ form>input[type=submit] {
 }
 
 #password-confirm-message {
-    height: 20px;
+    height: 30px;
     margin-top: 11px;
+    margin-bottom: -15px;
 }
 
 .valid {

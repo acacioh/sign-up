@@ -1,4 +1,5 @@
 let main = document.getElementById("content");
+let mainHeight = main.offsetHeight;
 let password = document.getElementById("ipass");
 let passwordMessage = document.getElementById("password-message");
 let confirmPassword = document.getElementById("icpass");
@@ -12,17 +13,18 @@ let spec = document.getElementById("special");
 let chars = ["!", "@", "#", "$"];
 
 password.onfocus = function () {
-  main.style.height = '530px';
   passwordMessage.style.display = "block";
+  main.style.height = (mainHeight + passwordMessage.offsetHeight) + "px";
 };
 
 password.onblur = function () {
-  main.style.height = '400px';
   passwordMessage.style.display = "none";
+  main.style.height = mainHeight + "px";
 };
 
 confirmPassword.onblur = function () {
   confirmPasswordMessage.style.display = "none";
+  main.style.height = mainHeight + "px";
 };
 
 password.onkeyup = function () {
@@ -90,11 +92,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function validatePassword() {
   if (password.value === confirmPassword.value) {
-    main.style.height = '400px';
     confirmPasswordMessage.style.display = "none";
+    main.style.height = mainHeight + "px";
   } else {
-    main.style.height = '430px';
     confirmPasswordMessage.style.display = "block";
+    main.style.height = (mainHeight + confirmPasswordMessage.offsetHeight) + "px";
   }
 }
 
