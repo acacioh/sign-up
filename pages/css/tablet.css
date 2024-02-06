@@ -1,25 +1,71 @@
+@charset "UTF-8";
+
 body {
-    background-image: linear-gradient(to bottom, var(--green), var(--bg-color));
+    background-image: linear-gradient(to bottom, var(--blue), var(--dark-blue));
 }
 
-main {
-    width: 600px;
-    height: 380px;
-}
-
-#image {
-    background: var(--dark-blue) url('../images/login.png') no-repeat;
-    background-position: center center;
-    background-size: cover;
-    width: 40%;
-    height: 100%;
-    float: left;
+#content {
+    width: 400px;
+    height: 490px;
 }
 
 #form {
-    width: 310px;
-    height: 100%;
-    float: right;
-    margin-top: 23px;
-    margin-right: 25px;
+    width: 340px;
+}
+
+main>section>h1 {
+    margin: 15px;
+    font-size: 1.4em;
+}
+
+main>section>p {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.field {
+    height: 50px;
+}
+
+span {
+    transform: translate(2px, 8px);
+}
+
+div>input {
+    height: 48px;
+
+    transform: translateY(-7px);
+}
+
+.inputbtn {
+    height: 48px;
+    margin-top: 12px;
+    font-size: 1.2em;
+}
+
+.container {
+    font-size: 0.9em;
+    width: 340px;
+}
+
+#password-message {
+    height: 155px;
+}
+
+#password-confirm-message {
+    margin-bottom: -10px;
+}
+
+footer {
+    width: 440px;
+    height: 80px;
+}
+
+footer>nav>a>img {
+    height: 35px;
+    width: 35px;
+}
+
+footer>p {
+    font-size: 1.15em;
 }
