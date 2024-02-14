@@ -1,47 +1,77 @@
+@charset "UTF-8";
+
+html,
 body {
-    background: url('../images/login.png') no-repeat;
-    background-size: cover;
-    background-position: center center;
+    background-color: rgba(0, 0, 0, 0);
 }
 
-main {
-    width: 410px;
-    height: 580px;
-}
-
-#image {
-    display: none;
+#content {
+    width: 450px;
+    height: 550px;
 }
 
 #form {
-    width: 330px;
-    margin-top: 58px;
-    margin-left: 40px;
+    width: 400px;
 }
 
-h1 {
-    font-size: 2.4em;
+main>section>h1 {
+    font-size: 1.6em;
 }
 
-p {
-    font-size: 1.8em;
+main>section>p {
+    font-size: 1.4em;
+    margin-bottom: 10px;
 }
 
 .field {
-    height: 70px;
+    height: 60px;
+    margin-top: 12px;
 }
 
 span {
-    transform: translate(2px, 8px);
+    width: 60px;
+
+    transform: translate(2px, 12px);
 }
 
 div>input {
-    height: 65px;
+    height: 56px;
+    width: calc(100% - 65px);
+    padding: 8px;
 
-    transform: translateY(1px);
+    transform: translateY(-2px);
 }
 
 .inputbtn {
+    width: 40%;
     height: 60px;
+    margin: 12px;
+    font-size: 1.4em;
+}
+
+.container {
+    font-size: 1em;
+    width: 380px;
+}
+
+#password-message {
+    height: 170px;
+}
+
+#password-confirm-message {
+    margin-bottom: -10px;
+}
+
+footer {
+    width: 500px;
+    height: 90px;
+}
+
+footer>nav>a>img {
+    height: 40px;
+    width: 40px;
+}
+
+footer>p {
     font-size: 1.3em;
 }

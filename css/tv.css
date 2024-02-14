@@ -1,0 +1,8 @@
+@charset "UTF-8";
+
+html,
+body {
+    background: url('../images/login.png') no-repeat;
+    background-size: cover;
+    background-position: center center;
+}

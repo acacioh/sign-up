@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+#content {
+    width: 850px;
+    height: 480px;
+}
+
+#image {
+    float: left;
+    display: block;
+    height: 100%;
+    width: 400px;
+}
+
+#form {
+    float: right;
+    width: 400px;
+    margin-right: 25px;
+}
+
+main>section>h1 {
+    font-size: 1.4em;
+}
+
+main>section>p {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.field {
+    height: 50px;
+    margin-top: 12px;
+}
+
+span {
+    width: 50px;
+
+    transform: translate(2px, 7px);
+}
+
+div>input {
+    height: 48px;
+    width: calc(100% - 55px);
+    padding: 8px;
+
+    transform: translateY(-7px);
+}
+
+.inputbtn {
+    width: 40%;
+    height: 50px;
+    margin: 12px;
+    font-size: 1.3em;
+}
+
+.container {
+    font-size: 1em;
+    width: 380px;
+}
+
+#password-message {
+    height: 170px;
+}
+
+#password-confirm-message {
+    margin-bottom: -10px;
+}
+
+footer {
+    width: 850px;
+    height: 90px;
+}
+
+footer>nav>a>img {
+    height: 40px;
+    width: 40px;
+}
+
+footer>p {
+    font-size: 1.3em;
+}
