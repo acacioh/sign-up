@@ -12,11 +12,6 @@ let space = document.getElementById("space");
 let spec = document.getElementById("special");
 let chars = ["!", "@", "#", "$"];
 
-let screenWidth = document.getElementById("screen-width");
-let screenWidthSize = screen.width;
-
-screenWidth.innerHTML = screenWidthSize
-
 password.onfocus = function () {
   passwordMessage.style.display = "block";
   main.style.height = (mainHeight + passwordMessage.offsetHeight) + "px";
